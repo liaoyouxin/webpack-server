@@ -1,0 +1,45 @@
+body {
+  background: yellow;
+}
+#root {
+  width: 200px;
+  height: 200px;
+  background: url(http://localhost:8888/img/5b037e08abee0288f98d28ba16df29e6.png);
+}
+.a,
+#b {
+  color: red;
+}
+.mixin-class {
+  color: red;
+}
+.mixin-id {
+  color: red;
+}
+.dialog {
+  background: #888;
+  color: red;
+}
+.dialog .title {
+  color: #fff;
+}
+.dialog a {
+  color: #fff;
+}
+.dialog {
+  width: 200px;
+  height: 100px;
+}
+.dialog::after {
+  content: '\4F60\597D';
+}
+#root::after {
+  content: 'hellothere';
+}
+.ie-fix {
+  height: 30px;
+  line-height: 30px;
+}
+#root {
+  width: 1000px;
+}

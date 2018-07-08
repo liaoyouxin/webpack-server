@@ -1,0 +1,84 @@
+
+/************变量**************/
+@color:color;
+@dialog:.dialog;
+@suffix:fix;
+@hi:'hello';
+@dear:there;
+@hello:'你好';
+@border-width: 100px;
+@border-height:100px;
+/*****************************/
+
+/**********混合************/
+.a, #b {
+  color: red;
+}
+.mixin-class {
+  .a();
+}
+.mixin-id {
+  #b();
+}
+/**************************/
+
+/*************带参数的混合***************/
+
+.border-radius(@radius){
+  border-radius: @radius;
+  -moz-border-radius:@radius;
+  -webkit-border-radius:@radius;
+}
+//带默认值
+.border-color(@font-color:#fff){
+  color:@font-color;
+}
+.border{
+   .border-radius(6px);
+   width: @border-width;
+   height: @border-height;
+   background: blue;
+   .border-color;
+}
+
+/***************************************/
+.acommon{
+	text-decoration: none;
+	color:#fff;
+}
+.dialog{
+	background:#888;
+	@{color}:red; 
+	.title{
+		@{color}:#fff;
+	}
+	a{
+		.acommon;
+	}
+}
+@{dialog}{
+	width: 200px;
+	height: 100px;
+}
+@{dialog}::after{
+	content: @@hi;
+};
+#root::after{
+	content: '@{hi}@{dear}';
+};
+@h:1000px; //全局
+
+.ie-@{suffix}{
+	@h:30px; //局部定义
+	height: @h;
+	line-height: 30px
+}
+#root{
+	width: @h;
+	.border-radius(6px); 
+	a{
+		.acommon;
+	}
+}
+@dialog-border-color:#666;
+@dialog-border-width:10px;
