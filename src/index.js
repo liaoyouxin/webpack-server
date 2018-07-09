@@ -1,5 +1,6 @@
 import './css/index.css';
 import './css/main.less';
+import './css/style.less';
 import {Text0} from './js/text-0.js';
 import {Text1} from './js/text-1.js';
 

@@ -6,6 +6,9 @@ body {
   height: 200px;
   background: url(http://localhost:8888/img/5b037e08abee0288f98d28ba16df29e6.png);
 }
+/************变量**************/
+/*****************************/
+/**********混合************/
 .a,
 #b {
   color: red;
@@ -16,6 +19,22 @@ body {
 .mixin-id {
   color: red;
 }
+/**************************/
+/*************带参数的混合***************/
+.border {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  width: 100px;
+  height: 100px;
+  background: blue;
+  color: #fff;
+}
+/***************************************/
+.acommon {
+  text-decoration: none;
+  color: #fff;
+}
 .dialog {
   background: #888;
   color: red;
@@ -24,6 +43,7 @@ body {
   color: #fff;
 }
 .dialog a {
+  text-decoration: none;
   color: #fff;
 }
 .dialog {
@@ -42,4 +62,62 @@ body {
 }
 #root {
   width: 1000px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+#root a {
+  text-decoration: none;
+  color: #fff;
+}
+/*嵌套规则*/
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+/*选择器*/
+.bordered.float {
+  float: left;
+}
+.bordered .top {
+  margin: 5px;
+}
+/*运算*/
+.class1 {
+  color: #222222;
+  background: #b5b5b5;
+  height: #ffffff;
+}
+/*less的运算可以分辨颜色和单位*/
+.class2 {
+  width: 22px;
+  border: 2px solid black;
+}
+/*Color函数*/
+.class3 {
+  color: #ffffff;
+}
+/*Math函数
+round(1.67); //返回2
+ceil(2.4); //返回3
+floor(2.6); //返回2
+percentage(0.5) //50%
+*/
+/*命名空间*/
+#header a {
+  color: orange;
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+}
+#header a:hover {
+  background-color: white;
 }

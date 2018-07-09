@@ -1,0 +1,73 @@
+/*嵌套规则*/
+
+#header{ 
+	color:black;
+	.navigation{
+		font-size: 12px;
+	} 
+	.logo{
+		width:300px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+/*选择器*/
+.bordered{
+	&.float{
+		float:left;
+	}
+
+	.top{
+		margin: 5px;
+	}
+}
+
+/*运算*/
+@base:5%;
+@filter: @base * 2;
+@other: @base + @filter;
+
+.class1{
+	color:#888 / 4;
+	background: #a4a4a4+#111;
+	height: 100% / 2 + @filter;
+}
+
+/*less的运算可以分辨颜色和单位*/
+@var:1px + 5;
+@width:(@var + 5)*2;
+
+.class2{
+	width: @width;
+	border: (@var - 4) solid black;
+}
+
+/*Color函数*/
+
+@base:#fff;
+
+.class3{
+	color:saturate(@base, 10%);
+}
+
+/*Math函数
+round(1.67); //返回2
+ceil(2.4); //返回3
+floor(2.6); //返回2
+percentage(0.5) //50%
+*/
+/*命名空间*/
+#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover { background-color: white }
+  }
+}
+ #header a {
+  color: orange;
+  #bundle > .button;
+}

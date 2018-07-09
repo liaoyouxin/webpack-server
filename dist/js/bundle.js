@@ -108,6 +108,17 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 
 /***/ }),
 
+/***/ "./src/css/style.less":
+/*!****************************!*\
+  !*** ./src/css/style.less ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/css/style.less?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -116,7 +127,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n\n__webpack_require__(/*! ./css/main.less */ \"./src/css/main.less\");\n\nvar _text = __webpack_require__(/*! ./js/text-0.js */ \"./src/js/text-0.js\");\n\nvar _text2 = __webpack_require__(/*! ./js/text-1.js */ \"./src/js/text-1.js\");\n\nvar textFun = function textFun() {\n\tfor (var _len = arguments.length, arg = Array(_len), _key = 0; _key < _len; _key++) {\n\t\targ[_key] = arguments[_key];\n\t}\n\n\tvar P = document.createElement(\"p\");\n\tP.innerHTML = arg.join('');\n\tdocument.getElementById('root').appendChild(P);\n};\nconsole.log(_text.Text0);\ntextFun(_text.Text0, _text2.Text1);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n\n__webpack_require__(/*! ./css/main.less */ \"./src/css/main.less\");\n\n__webpack_require__(/*! ./css/style.less */ \"./src/css/style.less\");\n\nvar _text = __webpack_require__(/*! ./js/text-0.js */ \"./src/js/text-0.js\");\n\nvar _text2 = __webpack_require__(/*! ./js/text-1.js */ \"./src/js/text-1.js\");\n\nvar textFun = function textFun() {\n\tfor (var _len = arguments.length, arg = Array(_len), _key = 0; _key < _len; _key++) {\n\t\targ[_key] = arguments[_key];\n\t}\n\n\tvar P = document.createElement(\"p\");\n\tP.innerHTML = arg.join('');\n\tdocument.getElementById('root').appendChild(P);\n};\nconsole.log(_text.Text0);\ntextFun(_text.Text0, _text2.Text1);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
